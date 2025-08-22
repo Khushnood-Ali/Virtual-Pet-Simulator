@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1>🐾 Virtual Pet Simulator</h1>
+            <div class="game-info">
+                <div class="pet-name">
+                    <span class="label">Pet Name:</span>
+                    <span id="petName">Buddy</span>
+                </div>
+                <div class="pet-age">
+                    <span class="label">Age:</span>
+                    <span id="petAge">0 days</span>
+                </div>
+                <div class="game-time">
+                    <span class="label">Time:</span>
+                    <span id="gameTime">Day</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <!-- Pet Display Area -->
+            <div class="pet-container">
+                <div class="pet-display" id="petDisplay">
+                    <div class="pet-character" id="petCharacter">
+                        <div class="pet-emoji" id="petEmoji">😊</div>
+                    </div>
+                    <div class="pet-message" id="petMessage">I'm feeling great!</div>
+                </div>
+            </div>
+
+            <!-- Status Panel -->
+            <div class="status-panel">
+                <h3>Pet Status</h3>
+                
+                <div class="attribute">
+                    <div class="attribute-header">
+                        <span class="attribute-icon">🍖</span>
+                        <span class="attribute-name">Hunger</span>
+                        <span class="attribute-value" id="hungerValue">50</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="hungerBar"></div>
+                    </div>
+                </div>
+
+                <div class="attribute">
+                    <div class="attribute-header">
+                        <span class="attribute-icon">😄</span>
+                        <span class="attribute-name">Happiness</span>
+                        <span class="attribute-value" id="happinessValue">50</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="happinessBar"></div>
+                    </div>
+                </div>
+
+                <div class="attribute">
+                    <div class="attribute-header">
+                        <span class="attribute-icon">⚡</span>
+                        <span class="attribute-name">Energy</span>
+                        <span class="attribute-value" id="energyValue">50</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="energyBar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Panel -->
+            <div class="action-panel">
+                <h3>Pet Actions</h3>
+                <div class="action-buttons">
+                    <button class="btn btn--primary action-btn" id="feedBtn" data-action="feed">
+                        <span class="btn-icon">🍖</span>
+                        Feed Pet
+                    </button>
+                    <button class="btn btn--primary action-btn" id="playBtn" data-action="play">
+                        <span class="btn-icon">🎮</span>
+                        Play
+                    </button>
+                    <button class="btn btn--primary action-btn" id="sleepBtn" data-action="sleep">
+                        <span class="btn-icon">💤</span>
+                        Sleep
+                    </button>
+                </div>
+                <div class="cooldown-indicator" id="cooldownIndicator">
+                    <div class="cooldown-bar" id="cooldownBar"></div>
+                </div>
+            </div>
+
+            <!-- Achievements Panel -->
+            <div class="achievements-panel">
+                <h3>Achievements</h3>
+                <div class="achievements-list" id="achievementsList">
+                    <!-- Achievements will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification System -->
+        <div class="notification" id="notification">
+            <span id="notificationText"></span>
+        </div>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>Keep your pet happy, fed, and rested! 🐾</p>
+            <div class="game-controls">
+                <button class="btn btn--secondary" id="resetBtn">Reset Game</button>
+                <button class="btn btn--secondary" id="saveBtn">Save Game</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
